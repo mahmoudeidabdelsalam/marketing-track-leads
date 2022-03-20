@@ -1,0 +1,326 @@
+:root {
+  --height: 30px;
+}
+
+.switch {
+  height: var(--height);
+  border-radius: var(--height);
+  position: relative;
+  aspect-ratio: 2;
+}
+
+.switch input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.switch div:before,
+.switch div:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: var(--height);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.switch div:before {
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  background-color: lightgray;
+  transition-delay: 0.2s;
+}
+
+.switch div:after {
+  top: 50%;
+  left: calc(0% + 3px);
+  transform: translateY(-50%);
+  background-color: white;
+  min-height: calc(100% - 6px);
+  aspect-ratio: 1;
+}
+
+.switch input[type="checkbox"]:checked~div:after {
+  left: calc(100% - var(--height) + 3px);
+}
+
+.switch input[type="checkbox"]:checked~div:before {
+  background-color: green;
+}
+
+form#active {
+  padding: 30px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 24px 1px #ccc;
+  width: auto;
+  display: inline-block;
+}
+
+form#active input {
+  min-width: 500px;
+  display: block;
+  height: 48px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  line-height: 48px;
+}
+
+form#active button {
+  padding: 10px 20px;
+  background: #0078ff;
+  border: 1px solid #30f;
+  border-radius: 4px;
+  height: 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  color: #fff;
+}
+
+.custom-field {
+  display: flex;
+  align-items: center;
+  max-width: 48%;
+  flex: 0 0 48%;
+  margin: 1%;
+  background-color: #f4f2f2;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  flex-wrap: wrap;
+}
+
+.custom-field label {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+form#create_iframe {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.wrap h1 {
+  font-size: 32px;
+  color: #000;
+}
+
+.box-create {
+  padding: 30px;
+  background: #fff;
+}
+
+.col-12 {
+  width: 100%;
+  flex: 0 0 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.custom-field select {
+  margin-left: auto;
+  min-width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+}
+
+.switch {
+  margin-left: auto;
+}
+
+button#create_page {
+  padding: 10px 30px;
+  border: none;
+  background: #0066ff;
+  color: #fff;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+p.active {
+  padding: 0 15px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+h3.headline-form {
+  width: 100%;
+  font-size: 24px;
+  text-transform: capitalize;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.template-page-choose {
+  display: flex;
+  justify-content: space-between;
+}
+
+.template-page-choose .template-item {
+  padding: 15px;
+  max-width: 33.333%;
+  flex: 0 0 33.333%;
+  box-sizing: border-box;
+}
+
+.template-page-choose .template-item img {
+  max-width: 200px;
+  height: 140px;
+}
+
+.template-page-choose .template-item input {
+  display: none;
+}
+
+.template-page-choose .template-item input:checked+label {
+  border: 2px solid #333;
+  box-shadow: 0 0 20px 1px #06f;
+}
+
+.template-page-choose .template-item label {
+  display: inline-block;
+  height: 140px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+input#text_name {
+  display: block;
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+form#create_iframe input[type="text"] {
+  display: block;
+  width: 100%;
+  flex: 0 0 100%;
+  margin-top: 30px;
+  height: 40px;
+  border: none;
+  background: rgb(0 0 0 / 9%);
+}
+
+#linkPage .button {
+  border: 2px solid black;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s all ease-in-out;
+  overflow: hidden;
+}
+
+#linkPage .button .container {
+  position: relative;
+  height: 40px;
+  width: 120px;
+}
+
+#linkPage .button .container .normal,
+#linkPage .button .container .hover,
+#linkPage .button .container .copied {
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.2s all ease-in-out;
+}
+
+#linkPage .button .container .normal {
+  opacity: 1;
+  color: black;
+  top: 0%;
+}
+
+#linkPage .button .container .hover,
+#linkPage .button .container .copied {
+  opacity: 0;
+  top: 100%;
+  color: white;
+}
+
+#linkPage .button.hover {
+  border-color: red;
+  background: red;
+}
+
+#linkPage .button.hover .container .normal {
+  top: -100%;
+  opacity: 0;
+}
+
+#linkPage .button.hover .container .hover {
+  top: 0%;
+  opacity: 1;
+}
+
+#linkPage .button.copied {
+  background: blue;
+  border-color: blue;
+}
+
+#linkPage .button.copied .container .normal,
+#linkPage .button.copied .container .hover {
+  top: -100%;
+}
+
+#linkPage .button.copied .container .copied {
+  top: 0%;
+  opacity: 1;
+  color: white;
+}
+
+div#editForm button {
+  padding: 5px 10px;
+  border: 1px solid #333;
+  text-transform: capitalize;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clipboard {
+  border: 0;
+  padding: 15px;
+  border-radius: 3px;
+  background-image: linear-gradient(135deg, #FDEB71 10%, #F8D800 100%);
+  cursor: pointer;
+  color: #04048c;
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 0;
+  transition: all .2s ease;
+}
+
+.clipboard:hover {
+  top: 2px;
+}
+
+p.text-copy {
+  margin: 5px 0 15px;
+}
+
+div#linkPage {
+  display: flex;
+  justify-content: space-between;
+}
+
+div#linkPage .copies {
+  margin: 10px;
+}
