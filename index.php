@@ -1,11 +1,11 @@
 <?php
 /*
     Plugin Name: Marketing Track Leads
-    Plugin URI: https://itdirections.com
+    Plugin URI: https://github.com/mahmoudeidabdelsalam/marketing-track-leads
     Description: Custom Track Leads Form
     Version: 1.0
     Author: itdirections 
-    Author URI: https://itdirections.com
+    Author URI: https://github.com/mahmoudeidabdelsalam/
 */
 
 class MarketingCustomTemplate {
@@ -15,8 +15,8 @@ class MarketingCustomTemplate {
 
 	public function __construct() {
 		$theme = wp_get_theme();
-		$this->source = dirname(__FILE__) . '/templates/blank-page.php';
-		$this->dest = $theme->get_template_directory() . '/blank-page.php';
+		$this->source = dirname(__FILE__) . '/templates/template-page-marketing.php';
+		$this->dest = $theme->get_template_directory() . '/template-page-marketing.php';
 
 		add_action( 'init', array( $this, 'marketing_custom_sidebar_init') );
 
@@ -74,13 +74,17 @@ function marketing_render() {
 }
 
 function load_style_script() {
-  wp_enqueue_script( 'ajax-script', plugins_url( 'assets/ajax-script.js', __FILE__ ), '1.4', true );
+  
   wp_enqueue_style('custom-style', plugins_url('assets/style.css', __FILE__ ) ,array());
-  wp_localize_script( 'ajax-save-page', 'savePage', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
+
+  wp_enqueue_script( 'ajax_custom_script', plugins_url( 'assets/plugin-script.js', __FILE__ ), array('jquery') );
+  wp_localize_script( 'ajax_custom_script', 'backendajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
+
 }
 add_action("admin_init", "load_style_script");
 
 
 require plugin_dir_path( __FILE__ ) . "inc/active-license.php";
 require plugin_dir_path( __FILE__ ) . "inc/cearte-page.php";
+require plugin_dir_path( __FILE__ ) . "inc/shortcode.php";
 ?>
