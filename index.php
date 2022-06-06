@@ -1,6 +1,6 @@
 <?php
 /*
-    Plugin Name: Marketing Track Leads
+    Plugin Name: Public Form Leads
     Plugin URI: https://github.com/mahmoudeidabdelsalam/marketing-track-leads
     Description: Custom Track Leads Form
     Version: 1.1.0

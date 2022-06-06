@@ -1,4 +1,4 @@
-=== marketing track leads ===
+=== Public Form Leads ===
 Contributors: wordpressdotorg, azaozz, melchoyce, chanthaboune, alexislloyd, pento, youknowriad, desrosj, luciano-croce
 Tags: marketing, track, track leads
 Requires at least: 4.9
