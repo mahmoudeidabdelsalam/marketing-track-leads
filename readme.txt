@@ -36,11 +36,7 @@ There are two options:
 The settings can be changed and default network-wide editor can be selected on the Network Settings screen.
 * When not network-activated each site administrator will be able to activate the plugin and choose options for their users.
 
-= Cannot find the "Switch to classic editor" link =
-
-It is in the main block editor menu, see this [screenshot](https://ps.w.org/classic-editor/assets/screenshot-7.png?rev=2023480).
-
-== Screenshots ==
+== Settings ==
 1. Admin settings on the Settings -> Writing screen.
 2. User settings on the Profile screen. Visible when the users are allowed to switch editors.
 3. "Action links" to choose alternative editor. Visible when the users are allowed to switch editors.
