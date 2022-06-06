@@ -2,19 +2,60 @@
 // The shortcode function
 function wp_form_shortcode($atts, $content = null) { 
   $attributes = shortcode_atts( array(  
-    'class' => 'custom-1',  
+    'class' => 'custom-1',
     'url' => '',
+
+    'first_name' => '',
+    'last_name' => '',
+    'email' => '',
+    'phone_number' => '',
+    'best_time' => '',
+    
+
+    'label_first_name' => '',
+    'label_last_name' => '',
+    'label_email' => '',
+    'label_phone_number' => '',
+    'label_best_time' => '',
+
+    'options' => [],
+
+
   ), $atts );
 
-  $string .= '
-    <form id="public_form" class="'.$attributes['class'].'" action="" method="post">
-      <input type="text" name="first_name" placeholder="Name">
-      <input type="text" name="email" placeholder="Email">
-      <input type="text" name="phone_number" placeholder="Phone">
-      <input type="text" name="best_time" placeholder="Time">
-      <button type="button" id="public_submit">submit</button>
-    </form>
-  ';
+  $string .= '<form id="public_form" class="'.$attributes['class'].'" action="" method="post">';
+  
+  if($attributes['first_name']) {
+    $string .= '<input type="text" name="'.$attributes['first_name'].'" placeholder="'.$attributes['label_first_name'].'">';
+  }
+  if($attributes['last_name']) {
+    $string .= '<input type="text" name="'.$attributes['first_name'].'" placeholder="'.$attributes['label_last_name'].'">';
+  }
+  if($attributes['email']) {
+    $string .= '<input type="text" name="'.$attributes['first_name'].'" placeholder="'.$attributes['label_email'].'">';
+  }
+  if($attributes['phone_number']) {
+    $string .= '<input type="text" name="'.$attributes['first_name'].'" placeholder="'.$attributes['label_phone_number'].'">';
+  }
+  if($attributes['best_time']) {
+    $string .= '<select name="'.$attributes['best_time'].'"> <option value="0" selected>'.$attributes['label_best_time'].'</option>';
+
+    
+    if($attributes['options']) {
+      $options = explode(',', $attributes['options']);
+      foreach($options as $option) {
+        $string .= '<option value="'.$option.'">'.$option.'</option>';
+      }
+    }
+
+    $string .= '</select>';
+  }
+
+
+
+
+  $string .= '<button type="button" id="public_submit">submit</button>';
+  $string .= '</form>';
     
   if($attributes['class'] == 'custom-1') {
     $string .= '
@@ -28,7 +69,8 @@ function wp_form_shortcode($atts, $content = null) {
           box-shadow: 0 0 3px -1px #333;
         }
         
-        form.custom-1 input {
+        form.custom-1 input,
+        form.custom-1 select {
           padding: 15px;
           margin: 10px 0;
           display: inline-block;
@@ -37,6 +79,7 @@ function wp_form_shortcode($atts, $content = null) {
         }
         
         form.custom-1 button {
+          margin-top: 15px;
           padding: 10px 20px;
         }
       </style>
@@ -55,7 +98,8 @@ function wp_form_shortcode($atts, $content = null) {
           background-image: linear-gradient(to right, #9100ff , #d6d602);
         }
         
-        form.custom-2 input {
+        form.custom-2 input,
+        form.custom-2 select {
           padding: 15px;
           margin: 10px 0;
           display: inline-block;
@@ -72,7 +116,7 @@ function wp_form_shortcode($atts, $content = null) {
           border: 1px solid #333;
           border-radius: 10px;
           display: block;
-          margin: auto;
+          margin: 15px auto 0;
         }
       </style>
     ';
@@ -87,7 +131,8 @@ function wp_form_shortcode($atts, $content = null) {
           border-radius: 4px;
         }
         
-        form.custom-3 input {
+        form.custom-3 input,
+        form.custom-3 select {
           padding: 15px;
           margin: 10px 0;
           display: inline-block;

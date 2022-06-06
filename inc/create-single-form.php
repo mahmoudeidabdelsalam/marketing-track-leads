@@ -47,9 +47,9 @@
         <input id="kt_name" type="text">
       </div>
       <div class="custom-form">
-        <label for="kt_socials"><?php _e('Social Media', 'mtl'); ?></label>
+        <label for="kt_socials"><?php _e('Social Media (option)', 'mtl'); ?></label>
         <select id="kt_socials">
-          <option value="0"><?php _e('select social', 'mtl'); ?></option>
+          <option value="0" selected><?php _e('select social', 'mtl'); ?></option>
         </select>
       </div>
       <div class="custom-form">

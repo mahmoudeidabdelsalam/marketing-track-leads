@@ -150,21 +150,55 @@ jQuery(document).ready(function ($) {
         var data = response.data;
         $('.review-form input').val('');
 
+        var userLang = navigator.language || navigator.userLanguage; 
+        alert ("The language is: " + userLang);
+
+
         $.ajax({
-          url: backendajax.ajax_url,
-          type: 'POST',
-          data: {
-            action: 'get_page_template',
-            form: '[markrting-leads class="'+kt_style+'" url="https//'+data+'" /]',
-            name:name,
-            social: social_name,
+          url: subdomainURL+'/api/v1/plugin/departments-inputs/'+department_id,
+          type: 'GET',
+          headers: {
+            "email": emailActive,
+            "apikey": apikeyactive,
+            "lang": "en"
           },
+          data: {},
           success: function (response) {
-            $('.review-form').show();
-            $('.review-form input').val('[markrting-leads class="'+kt_style+'" url="https//'+data+'" /]');
-            $('.review-form #page').html(response);
+            let myArray = response.data
+            var output = '[markrting-leads ';
+            myArray.forEach(function(element) { 
+              output += element.name+'="'+element.name+'" ';
+              if(userLang === "en-US") {
+                output += 'label_'+element.name+'="'+element.label.en+'" ';
+              } else {
+                output += 'label_'+element.name+'="'+element.label.ar+'" ';
+              }
+              output += 'options="'+element.options+'" ';
+            });
+
+            output += 'url="https//'+data+'" ';
+            output += 'class="'+kt_style+'" ';
+            output += ' /]';
+
+            $.ajax({
+              url: backendajax.ajax_url,
+              type: 'POST',
+              data: {
+                action: 'get_page_template',
+                form: output,
+                name:name,
+                social: social_name,
+              },
+              success: function (response) {
+                $('.review-form').show();
+                $('.review-form input').val(output);
+                $('.review-form #page').html(response);
+              },
+            });
+    
           },
         });
+        
       },
     });
   });
