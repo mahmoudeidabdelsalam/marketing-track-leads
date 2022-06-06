@@ -3,7 +3,7 @@
     Plugin Name: Marketing Track Leads
     Plugin URI: https://github.com/mahmoudeidabdelsalam/marketing-track-leads
     Description: Custom Track Leads Form
-    Version: 1.0
+    Version: 1.1.0
     Author: itdirections 
     Author URI: https://github.com/mahmoudeidabdelsalam/
 */

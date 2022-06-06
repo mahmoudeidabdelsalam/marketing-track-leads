@@ -3,10 +3,10 @@ Contributors: wordpressdotorg, azaozz, melchoyce, chanthaboune, alexislloyd, pen
 Tags: marketing, track, track leads
 Requires at least: 4.9
 Tested up to: 5.9
-Stable tag: 1.6.2
+Stable tag: 1.0.0
 Requires PHP: 5.2.4
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Enables the previous "classic" editor and the old-style Edit Post screen with TinyMCE, Meta Boxes, etc. Supports all plugins that extend this screen.
 
@@ -18,6 +18,9 @@ The add-on makes a filled-in fields form to suit the site and the general shape,
 
 = 0.1 =
 Initial release.
+
+= 0.2 =
+fix Description release.
 
 == Frequently Asked Questions ==
 
