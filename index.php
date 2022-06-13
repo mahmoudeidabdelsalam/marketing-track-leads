@@ -3,8 +3,8 @@
     Plugin Name: Public Form Leads
     Plugin URI: https://github.com/mahmoudeidabdelsalam/marketing-track-leads
     Description: Custom Track Leads Form
-    Version: 1.1.0
-    Author: itdirections 
+    Version: 1.0.1
+    Author: ma7moud3id89 
     Author URI: https://github.com/mahmoudeidabdelsalam/
 */
 
@@ -46,43 +46,48 @@ class MarketingCustomTemplate {
 //Initialize plugin
 new MarketingCustomTemplate();
 
-add_action( 'admin_menu', 'marketing_register' );
+if( !function_exists('marketing_register') ) {
+  add_action( 'admin_menu', 'marketing_register' );
 
-function marketing_register() {
-  add_menu_page(
-    'Track Leads',     // page title
-    'Track Leads',     // menu title
-    'manage_options',   // capability
-    'track-leads',     // menu slug
-    'marketing_render', // callback function
-    'dashicons-networking',
-  );
+  function marketing_register() {
+    add_menu_page(
+      'Track Leads',     // page title
+      'Track Leads',     // menu title
+      'manage_options',   // capability
+      'track-leads',     // menu slug
+      'marketing_render', // callback function
+      'dashicons-networking',
+    );
+  }
 }
 
-function marketing_render() {
-  global $title;
+if( !function_exists('marketing_render') ) {
+  function marketing_render() {
+    global $title;
 
-  print '<div class="wrap">';
-  print "<h1>$title</h1>";
+    print '<div class="wrap">';
+    print "<h1>$title</h1>";
 
-  $file = plugin_dir_path( __FILE__ ) . "included.php";
+    $file = plugin_dir_path( __FILE__ ) . "included.php";
 
-  if ( file_exists( $file ) )
-      require $file;
+    if ( file_exists( $file ) )
+        require $file;
 
-  print '</div>';
+    print '</div>';
+  }
 }
 
-function load_style_script() {
-  
-  wp_enqueue_style('custom-style', plugins_url('assets/style.css', __FILE__ ) ,array());
+if( !function_exists('load_style_script') ) {
+  function load_style_script() {
+    
+    wp_enqueue_style('custom-style', plugins_url('assets/style.css', __FILE__ ) ,array());
 
-  wp_enqueue_script( 'ajax_custom_script', plugins_url( 'assets/plugin-script.js', __FILE__ ), array('jquery') );
-  wp_localize_script( 'ajax_custom_script', 'backendajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
+    wp_enqueue_script( 'ajax_custom_script', plugins_url( 'assets/plugin-script.js', __FILE__ ), array('jquery') );
+    wp_localize_script( 'ajax_custom_script', 'backendajax', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
 
+  }
+  add_action("admin_init", "load_style_script");
 }
-add_action("admin_init", "load_style_script");
-
 
 require plugin_dir_path( __FILE__ ) . "inc/active-license.php";
 require plugin_dir_path( __FILE__ ) . "inc/cearte-page.php";

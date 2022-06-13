@@ -127,9 +127,9 @@ jQuery(document).ready(function ($) {
     var service_id    = $("#kt_services").find(":selected").val();
     var doctor_id     = $("#kt_doctor").find(":selected").val();
     var social_id     = $("#kt_socials").find(":selected").val();
-    var social_name     = $("#kt_socials").find(":selected").text();
+    var social_name   = $("#kt_socials").find(":selected").text();
     var name          = $("#kt_name").val();
-    var kt_style     = $("#kt_style").find(":selected").val();
+    var kt_style      = $("#kt_style").find(":selected").val();
 
     $.ajax({
       type: 'POST',
@@ -151,8 +151,7 @@ jQuery(document).ready(function ($) {
         $('.review-form input').val('');
 
         var userLang = navigator.language || navigator.userLanguage; 
-        alert ("The language is: " + userLang);
-
+        // alert ("The language is: " + userLang);
 
         $.ajax({
           url: subdomainURL+'/api/v1/plugin/departments-inputs/'+department_id,
@@ -165,6 +164,9 @@ jQuery(document).ready(function ($) {
           data: {},
           success: function (response) {
             let myArray = response.data
+
+            console.log(myArray);
+
             var output = '[markrting-leads ';
             myArray.forEach(function(element) { 
               output += element.name+'="'+element.name+'" ';

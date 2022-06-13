@@ -1,46 +1,41 @@
 === Public Form Leads ===
-Contributors: wordpressdotorg, azaozz, melchoyce, chanthaboune, alexislloyd, pento, youknowriad, desrosj, luciano-croce
-Tags: marketing, track, track leads
-Requires at least: 4.9
-Tested up to: 5.9
-Stable tag: 1.0.0
-Requires PHP: 5.2.4
+Contributors: ma7moud3id89
+Donate link: https://itdirections.net/
+Tags: itdirections, Public Form Leads, Leads
+Requires at least: 4.7
+Tested up to: 6.0
+Requires PHP: 7.0
+Stable tag: 1.0.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Enables the previous "classic" editor and the old-style Edit Post screen with TinyMCE, Meta Boxes, etc. Supports all plugins that extend this screen.
+Public Form Leads A form through which data is collected in cooperation with the itdirections.net website 
 
 == Description ==
-The add-on makes a filled-in fields form to suit the site and the general shape, and through the addition, the number of users is followed
+Data collection is done with the API from a control panel system for the owner of the site with his own data base. The control of the site is approved by the owner of the site and the account owner of the program for clinics, knowing the size of customers and data for use in booking and downloading customer data
 
-
-== Changelog ==
-
-= 0.1 =
-Initial release.
-
-= 0.2 =
-fix Description release.
+== Installation ==
+1- Upload and install Public Form Leads in the same way you\'d install any other plugin.
+2- Go to the Track Leads page from the side menu.
 
 == Frequently Asked Questions ==
+How to use
+1- On the page Public Form Leads, the specialty is selected. After choosing the specialty, the doctor is chosen, the service is selected, the name of the model is chosen, the name of the social media is chosen, and finally, select the design, then click create iframe and wait for the result.
+2- result, [shortcode] and page default template theme
 
-= Default settings =
 
-When activated this plugin add A page is added through which the fields and the shape are prepared
 
-= Default settings for network installation =
+== Screenshots ==
+1. Active plugin Public Form Lead
+2. Go Page Track Leads
+3. select all sections and submit
 
-There are two options:
+== Changelog == 
+= 1.0.1 - 13 June 2022 =
+* fix issues.
 
-* When network-activated this plugin will set the classic editor as default and prevent site administrators and users from changing editors.
-The settings can be changed and default network-wide editor can be selected on the Network Settings screen.
-* When not network-activated each site administrator will be able to activate the plugin and choose options for their users.
+= 1.0.0 - 7 June 2022 =
+* Basic plugin init.
 
-== Settings ==
-1. Admin settings on the Settings -> Writing screen.
-2. User settings on the Profile screen. Visible when the users are allowed to switch editors.
-3. "Action links" to choose alternative editor. Visible when the users are allowed to switch editors.
-4. Link to switch to the block editor while editing a post in the classic editor. Visible when the users are allowed to switch editors.
-5. Link to switch to the classic editor while editing a post in the block editor. Visible when the users are allowed to switch editors.
-6. Network settings to select the default editor for the network and allow site admins to change it.
-7. The "Switch to classic editor" link.
+== Upgrade Notice ==
+* Upgrade.

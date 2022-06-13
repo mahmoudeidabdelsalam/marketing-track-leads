@@ -20,50 +20,50 @@
   <form method="get" id="create_iframe">
     <div class="group-forms">
       <div class="custom-form">
-        <label for="kt_department"><?php _e('Department', 'mtl'); ?></label>
+        <label for="kt_department"><?php esc_html_e('Department', 'mtl'); ?></label>
         <select id="kt_department">
-          <option value="0"><?php _e('select department', 'mtl'); ?></option>
+          <option value="0"><?php esc_html_e('select department', 'mtl'); ?></option>
         </select>
       </div>
 
       <div class="custom-form">
-        <label for="kt_doctor"><?php _e('Doctors', 'mtl'); ?></label>
+        <label for="kt_doctor"><?php esc_html_e('Doctors', 'mtl'); ?></label>
         <select id="kt_doctor">
-          <option value="0"><?php _e('select doctor', 'mtl'); ?></option>
+          <option value="0"><?php esc_html_e('select doctor', 'mtl'); ?></option>
         </select>
       </div>
 
       <div class="custom-form">
-        <label for="kt_services"><?php _e('Services', 'mtl'); ?></label>
+        <label for="kt_services"><?php esc_html_e('Services', 'mtl'); ?></label>
         <select id="kt_services">
-          <option value="0"><?php _e('select service', 'mtl'); ?></option>
+          <option value="0"><?php esc_html_e('select service', 'mtl'); ?></option>
         </select>
       </div>
     </div>
 
     <div class="group-forms">
       <div class="custom-form">
-        <label for="kt_name"><?php _e('Form Name', 'mtl'); ?></label>
+        <label for="kt_name"><?php esc_html_e('Form Name', 'mtl'); ?></label>
         <input id="kt_name" type="text">
       </div>
       <div class="custom-form">
-        <label for="kt_socials"><?php _e('Social Media (option)', 'mtl'); ?></label>
+        <label for="kt_socials"><?php esc_html_e('Social Media (option)', 'mtl'); ?></label>
         <select id="kt_socials">
           <option value="0" selected><?php _e('select social', 'mtl'); ?></option>
         </select>
       </div>
       <div class="custom-form">
-        <label for="kt_style"><?php _e('Select Design', 'mtl'); ?></label>
+        <label for="kt_style"><?php esc_html_e('Select Design', 'mtl'); ?></label>
         <select id="kt_style">
-          <option value="custom-1"><?php _e('design light', 'mtl'); ?></option>
-          <option value="custom-2"><?php _e('design colors', 'mtl'); ?></option>
-          <option value="custom-3"><?php _e('design full width', 'mtl'); ?></option>
+          <option value="custom-1"><?php esc_html_e('design light', 'mtl'); ?></option>
+          <option value="custom-2"><?php esc_html_e('design colors', 'mtl'); ?></option>
+          <option value="custom-3"><?php esc_html_e('design full width', 'mtl'); ?></option>
         </select>
       </div>
     </div>
 
     <div class="footer-form">
-      <button type="button" id="submit_iframe"><?php _e('create iframe', 'mtl'); ?></button>
+      <button type="button" id="submit_iframe"><?php esc_html_e('create iframe', 'mtl'); ?></button>
     </div>
   </form>
 
