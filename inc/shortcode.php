@@ -1,7 +1,7 @@
 <?php 
 // The shortcode function
-if( !function_exists('wp_form_shortcode') ) {
-  function wp_form_shortcode($atts, $content = null) { 
+if( !function_exists('pfl_markrting_shortcode') ) {
+  function pfl_markrting_shortcode($atts, $content = null) { 
     $attributes = shortcode_atts( array(  
       'class' => 'custom-1',
       'url' => '',
@@ -181,10 +181,10 @@ if( !function_exists('wp_form_shortcode') ) {
 /**
  * Central location to create all shortcodes.
  */
-if( !function_exists('wporg_shortcodes_init') ) {
-  function wporg_shortcodes_init() {
-    add_shortcode('markrting-leads', 'wp_form_shortcode'); 
+if( !function_exists('pfl_markrting_init') ) {
+  function pfl_markrting_init() {
+    add_shortcode('markrting-leads', 'pfl_markrting_shortcode'); 
   }
 
-  add_action( 'init', 'wporg_shortcodes_init' );
+  add_action( 'init', 'pfl_markrting_init' );
 }
