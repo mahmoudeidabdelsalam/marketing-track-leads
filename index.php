@@ -8,7 +8,7 @@
     Author URI: https://github.com/mahmoudeidabdelsalam/
 */
 
-class MarketingCustomTemplate {
+class pfl_marketing_source {
 
 	private $source;
 	private $dest;
@@ -44,7 +44,7 @@ class MarketingCustomTemplate {
 }
 
 //Initialize plugin
-new MarketingCustomTemplate();
+new pfl_marketing_source();
 
 if( !function_exists('marketing_register') ) {
   add_action( 'admin_menu', 'marketing_register' );

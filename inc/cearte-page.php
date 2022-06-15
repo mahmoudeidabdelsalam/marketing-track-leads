@@ -1,6 +1,6 @@
 <?php 
-if( !function_exists('cp_marketing_form') ) {
-  function cp_marketing_form() {    
+if( !function_exists('pfl_generator_form') ) {
+  function pfl_generator_form() {    
 
     $form   = sanitize_text_field($_POST['form']);
     $social = sanitize_title($_POST['social']);
@@ -22,6 +22,6 @@ if( !function_exists('cp_marketing_form') ) {
     die();
   }
 
-  add_action('wp_ajax_nopriv_get_page_template', 'cp_marketing_form');
-  add_action('wp_ajax_get_page_template', 'cp_marketing_form');
+  add_action('wp_ajax_nopriv_get_page_template', 'pfl_generator_form');
+  add_action('wp_ajax_get_page_template', 'pfl_generator_form');
 }
