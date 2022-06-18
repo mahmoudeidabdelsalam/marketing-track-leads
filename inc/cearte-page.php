@@ -17,7 +17,7 @@ if( !function_exists('pfl_generator_form') ) {
     $the_page_id = wp_insert_post( $page );
 
     echo "Page cearte done <a href=".esc_url(get_permalink($the_page_id))."> view page</a>";
-    echo "<p style='color: red;'>".esc_html_e( 'If you want to use a second design page default, you can take a copy of the short code and place it on any page you want', 'mtl' )."</p>";
+    echo "<p style='color: red;'>".esc_html_e( 'If you want to use a second design page default, you can take a copy of the short code and place it on any page you want', 'public-form-leads' )."</p>";
 
     die();
   }
