@@ -6,6 +6,7 @@
     Version: 1.0.1
     Author: ma7moud3id89 
     Author URI: https://github.com/mahmoudeidabdelsalam/
+    Text Domain: public-form-leads
 */
 
 class pfl_marketing_source {
