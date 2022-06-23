@@ -4,8 +4,8 @@
     Plugin URI: https://github.com/mahmoudeidabdelsalam/marketing-track-leads
     Description: Public Form Leads A form through which data is collected in cooperation with the itdirections.net website.
     Version: 1.0.1
-    Author: ma7moud3id89 
-    Author URI: https://github.com/mahmoudeidabdelsalam/
+    Author: itdirections 
+    Author URI: https://itdirections.net/
     Text Domain: public-form-leads
 */
 

@@ -1,5 +1,5 @@
 === Public Form Leads ===
-Contributors: ma7moud3id89
+Contributors: itdirections
 Donate link: https://itdirections.net/
 Tags: itdirections, Public Form Leads, Leads
 Requires at least: 4.7
